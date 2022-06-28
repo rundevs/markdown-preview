@@ -8,6 +8,7 @@
 			"@/*": ["src/*"],
       "styles/*": ["src/assets/styles/*"]
 		},
+    "types": ["react/next", "react-dom/next"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,

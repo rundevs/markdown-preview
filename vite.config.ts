@@ -12,7 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': join(__dirname, 'src'),
-      'styles': join(__dirname, 'src/assets/styles'),
+      styles: join(__dirname, 'src/assets/styles'),
     },
   },
   plugins: [
@@ -37,7 +37,7 @@ export default defineConfig({
             // For debug
             sourcemap: 'inline',
             outDir: 'dist/electron/preload',
-          }
+          },
         },
       },
       // Enables use of Node.js API in the Renderer-process
