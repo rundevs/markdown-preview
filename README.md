@@ -1,12 +1,11 @@
-# electron-vite-react
+# Electron app `Markdown Preview`
 
 [![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite)
-![GitHub stars](https://img.shields.io/github/stars/caoxiemeihao/vite-react-electron?color=fa6470&style=flat)
-![GitHub issues](https://img.shields.io/github/issues/caoxiemeihao/vite-react-electron?color=d8b22d&style=flat)
-![GitHub license](https://img.shields.io/github/license/caoxiemeihao/vite-react-electron?style=flat)
+![GitHub stars](https://img.shields.io/github/stars/LuiSauter/markdown-preview?color=fa6470&style=flat)
+![GitHub license](https://img.shields.io/github/license/LuiSauter/markdown-preview?style=flat)
 [![Required Node.JS >= v14.17.0](https://img.shields.io/static/v1?label=node&message=%3E=14.17.0&logo=node.js&color=3f893e&style=flat)](https://nodejs.org/about/releases)
 
-English | [简体中文](README.zh-CN.md)
+English | TypeScript | React | Electron | Vite
 
 ## Overview
 
@@ -20,14 +19,14 @@ English | [简体中文](README.zh-CN.md)
 ## Quick start
 
 ```sh
-npm create electron-vite
+# using npm
+npm install && npm run dev
+
+# using yarn
+yarn install && yarn run dev
 ```
 
-![electron-vite-react.gif](https://github.com/electron-vite/electron-vite-react/blob/main/public/electron-vite-react.gif?raw=true)
-
-## Debug
-
-![electron-vite-react-debug.gif](https://github.com/electron-vite/electron-vite-react/blob/main/public/electron-vite-react-debug.gif?raw=true)
+<!-- ## Debug -->
 
 ## Directory structure
 
@@ -77,18 +76,3 @@ npm create electron-vite
 - `axios`
 - ...others Web packages
 
-**TODO: ESM packages**
-
-- `node-fetch`
-- `execa`
-- ...others ESM packages
-
-See more 👉 [dependencies vs devDependencies](https://github.com/electron-vite/vite-plugin-electron-renderer#dependencies-vs-devdependencies)
-
-<!--
-- First, you need to know if your dependencies are needed after the application is packaged.
-
-- Like [serialport](https://www.npmjs.com/package/serialport), [sqlite3](https://www.npmjs.com/package/sqlite3) they are node-native modules and should be placed in `dependencies`. In addition, Vite will not build them, but treat them as external modules.
-
-- Dependencies like [Vue](https://www.npmjs.com/package/vue) and [React](https://www.npmjs.com/package/react), which are pure javascript modules that can be built with Vite, can be placed in `devDependencies`. This reduces the size of the application.
--->
