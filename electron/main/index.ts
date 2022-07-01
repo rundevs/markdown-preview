@@ -23,11 +23,17 @@ const url = `http://${process.env['VITE_DEV_SERVER_HOST']}:${process.env['VITE_D
 async function createWindow() {
   win = new BrowserWindow({
     title: 'Main window',
+    autoHideMenuBar: true,
+    titleBarStyle: 'customButtonsOnHover',
+    roundedCorners: true,
     webPreferences: {
       preload: splash,
       nodeIntegration: true,
-      contextIsolation: false,
+      contextIsolation: false
     },
+    darkTheme: true,
+    focusable: true,
+    frame: true,
   })
 
   if (app.isPackaged) {
