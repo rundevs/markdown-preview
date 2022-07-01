@@ -1,8 +1,16 @@
-html, body {
+*, html {
   background-color: transparent;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: transparent;
+  /* background-color: #00000075; */
+  /* backdrop-filter: blur(10px); */
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -11,16 +19,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: transparent
 }
 
 #root {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: transparent
+  background-color: transparent;
 }
 
 code {
