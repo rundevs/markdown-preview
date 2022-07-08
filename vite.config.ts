@@ -12,8 +12,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': join(__dirname, 'src'),
-      styles: join(__dirname, 'src/assets/styles'),
-    },
+      styles: join(__dirname, 'src/assets/styles')
+    }
   },
   plugins: [
     react(),
@@ -23,29 +23,29 @@ export default defineConfig({
         vite: {
           build: {
             sourcemap: false,
-            outDir: 'dist/electron/main',
-          },
-        },
+            outDir: 'dist/electron/main'
+          }
+        }
       },
       preload: {
         input: {
           // You can configure multiple preload scripts here
-          splash: join(__dirname, 'electron/preload/splash.ts'),
+          splash: join(__dirname, 'electron/preload/splash.ts')
         },
         vite: {
           build: {
             // For debug
             sourcemap: 'inline',
-            outDir: 'dist/electron/preload',
-          },
-        },
+            outDir: 'dist/electron/preload'
+          }
+        }
       },
       // Enables use of Node.js API in the Renderer-process
-      renderer: {},
-    }),
+      renderer: {}
+    })
   ],
   server: {
     host: pkg.env.VITE_DEV_SERVER_HOST,
-    port: pkg.env.VITE_DEV_SERVER_PORT,
-  },
+    port: pkg.env.VITE_DEV_SERVER_PORT
+  }
 })
