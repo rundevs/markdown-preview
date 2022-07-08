@@ -1,25 +1,19 @@
 *, html {
-  background-color: transparent;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: transparent;
-  /* background-color: #00000075; */
-  /* backdrop-filter: blur(10px); */
-  height: 100%;
-}
-
-body {
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: transparent
+  background-color: #23272E;
+  color: #B4B4B4;
 }
 
 #root {

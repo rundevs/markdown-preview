@@ -1,12 +1,19 @@
-import React from 'react'
-import Editor from './components/Editor'
-import styles from './assets/styles/app.module.css'
+import React, { useCallback, useRef, useState } from 'react'
+import CodeEditor from './components/Editor/CodeEditor'
 
-const App: React.FC = () => {
+const example = `# Hello, World.
+
+Here is some Markdown.`
+
+const App = (): JSX.Element => {
+  const [doc, setDoc] = useState<string>(example)
+  const handleDocChange = useCallback((newDoc: any) => {
+    setDoc(newDoc)
+  }, [])
 
   return (
-    <div className={styles.app}>
-      <Editor />
+    <div>
+      <CodeEditor onChange={handleDocChange} initialDoc={doc} />
     </div>
   )
 }
