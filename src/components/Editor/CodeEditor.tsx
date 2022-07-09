@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect } from 'react'
 import useCodeMirror from '../../hooks/useCodeMirror'
+import style from './editor.module.css'
 
 interface Props {
   initialDoc: string
@@ -23,7 +24,12 @@ const CodeEditor: React.FC<Props> = props => {
     }
   }, [editorView])
 
-  return <div ref={refContainer}></div>
+  return (
+    <div
+      ref={refContainer}
+      className={style.editorWrapper}
+    />
+  )
 }
 
 export default CodeEditor
