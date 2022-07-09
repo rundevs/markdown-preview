@@ -2,9 +2,10 @@ import './shim'
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App'
-import 'styles/index.css'
+import './assets/styles/index.css'
 
-const rootNode = document.getElementById('root') ?? document.createDocumentFragment()
+const rootNode =
+  document.getElementById('root') ?? document.createDocumentFragment()
 const root = createRoot(rootNode)
 
 root.render(
@@ -13,4 +14,4 @@ root.render(
   </React.StrictMode>
 )
 
-window.removeLoading()
+// window.removeLoading()

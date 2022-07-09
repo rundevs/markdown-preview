@@ -1,4 +1,6 @@
-function domReady(condition: DocumentReadyState[] = ['complete', 'interactive']) {
+function domReady(
+  condition: DocumentReadyState[] = ['complete', 'interactive']
+) {
   return new Promise(resolve => {
     if (condition.includes(document.readyState)) {
       resolve(true)
@@ -22,7 +24,7 @@ const safeDOM = {
     if (Array.from(parent.children).find(e => e === child)) {
       return parent.removeChild(child)
     }
-  },
+  }
 }
 
 /**
@@ -83,5 +85,10 @@ function useLoading() {
 // ----------------------------------------------------------------------
 
 const { appendLoading, removeLoading } = useLoading()
-window.removeLoading = removeLoading
 domReady().then(appendLoading)
+
+window.onmessage = ev => {
+  ev.data.payload === 'removeLoading' && removeLoading()
+}
+
+setTimeout(removeLoading, 100)
