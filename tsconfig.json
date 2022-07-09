@@ -1,28 +1,19 @@
 {
   "compilerOptions": {
-		"baseUrl": ".",
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-		"paths": {
-			"@/*": ["src/*"],
-      "styles/*": ["src/assets/styles/*"]
-		},
-    "types": ["react/next", "react-dom/next"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "esnext",
+    "target": "esnext",
+    "sourceMap": true,
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "types": [
+      "vite/client",
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+    ],
+    "lib": ["ESNext"]
   },
-  "include": ["src", "types.d.ts", "electron/main/**/*.ts", "electron/preload/**/*.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }
-
