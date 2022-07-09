@@ -1,8 +1,10 @@
 import { rmSync } from 'fs'
 import { join } from 'path'
 import { defineConfig } from 'vite'
+// import { builtinModules } from 'module'
 import react from '@vitejs/plugin-react'
 import electron from 'vite-plugin-electron'
+// import { chrome } from './electron-vendeors.config.json'
 import pkg from './package.json'
 
 rmSync(join(__dirname, 'dist'), { recursive: true, force: true }) // v14.14.0
