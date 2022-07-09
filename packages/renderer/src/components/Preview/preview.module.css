@@ -1,0 +1,123 @@
+.preview {
+  height: 100vh;
+  flex: 0 0 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #bac1cc;
+  position: relative;
+  font-size: 16px;
+  border-left: 1px solid #4248539a;
+}
+
+.preview p {
+  margin-bottom: 1rem;
+}
+
+.preview blockquote {
+  border-left: 4px solid #8b949e48;
+  padding-left: 1rem;
+  color: #8b949e;
+  opacity: 0.9;
+}
+
+.preview div > :first-child {
+  margin-top: 0;
+}
+
+.preview pre {
+  background-color: rgba(27, 31, 35, 0.45);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  position: relative;
+  /* wrap in new line */
+  /* white-space: pre-wrap; */
+}
+
+.preview pre::-webkit-scrollbar, .preview table::-webkit-scrollbar {
+  height: 10px;
+}
+
+.preview code {
+  background-color: #6e768173;
+  padding: 0rem 0.3rem;
+  border-radius: 0.4rem;
+  color: #c9d1d9;
+}
+
+.preview pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+.preview hr {
+  border: 2px solid #c9d1d93d;
+  border-radius: 0.1rem;
+  margin: 1.5rem 0;
+}
+
+.preview ul, .preview ol {
+  margin-bottom: 1rem;
+}
+
+.preview li {
+  margin-left: 2rem;
+  padding-left: 0.5rem;
+}
+.preview li::marker {
+  color: #cad0db;
+}
+
+.preview h1, h2, h3, h4 {
+  margin: 1.5rem 0 1rem 0;
+  color: #cad0db;
+}
+
+.preview h1 {
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #abb2bf3a;
+}
+.preview h2 {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #abb2bf3a;
+}
+.preview h3 {
+  padding-bottom: 0.5rem;
+}
+.preview h4 {
+  padding-bottom: 0.4rem;
+}
+
+.preview a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.preview table {
+  width: max-content;
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+}
+
+.preview thead {
+  color: #cad0db;
+  font-size: 17px;
+}
+
+.preview th, .preview td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #80808085;
+}
+
+.preview tr:nth-child(2n) {
+  background-color: #2f3641;
+}
