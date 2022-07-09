@@ -22,7 +22,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "types.d.ts"],
+  "include": ["src", "types.d.ts", "electron/main/**/*.ts", "electron/preload/**/*.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
 
