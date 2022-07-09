@@ -28,50 +28,6 @@ yarn install && yarn run dev
 
 <!-- ## Debug -->
 
-## Directory structure
+## Demo preview
 
-*🚨 By default, the files in `electron` folder will be built into the `dist/electron`*
-
-```tree
-├── electron                  Electron-related code
-│   ├── main                  Main-process source code
-│   ├── preload               Preload-script source code
-│   └── resources             Resources for the production build
-│       ├── icon.icns             Icon for the application on macOS
-│       ├── icon.ico              Icon for the application
-│       ├── installerIcon.ico     Icon for the application installer
-│       └── uninstallerIcon.ico   Icon for the application uninstaller
-│
-├── release                   Generated after production build, contains executables
-│   └──{version}
-│       ├── {os}-unpacked     Contains unpacked application executable
-│       └── Setup.{ext}       Installer for the application
-│
-├── public                    Static assets
-└── src                       Renderer source code, your React application
-```
-
-## 🚨 `dependencies` vs `devDependencies`
-
-**Put Node.js packages in `dependencies`**
-
-🚨 e.g.
-
-- `electron-store`
-- `sqlite3`
-- `serilaport`
-- `mongodb`
-- ...others Node.js packages
-
-**Put Web packages in `devDependencies`**
-
-🚨 e.g.
-
-- `react`
-- `react-dom`
-- `react-router`
-- `mobx`
-- `zustand`
-- `antd`
-- `axios`
-- ...others Web packages
+![demo-markdown-preview](https://user-images.githubusercontent.com/88288135/178121670-43a89b05-191d-474b-95bf-9a56e10549cd.jpg)
