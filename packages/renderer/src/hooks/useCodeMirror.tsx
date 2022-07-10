@@ -14,7 +14,7 @@ import { oneDark } from '@codemirror/theme-one-dark'
 export const transparentTheme = EditorView.theme({
   '&': {
     backgroundColor: 'transparent !important',
-    height: '100%',
+    height: '100%'
   }
 })
 
@@ -26,13 +26,18 @@ const syntaxHighlighting = HighlightStyle.define([
   },
   {
     tag: tags.heading2,
-    fontSize: '1.4em',
+    fontSize: '1.5em',
     fontWeight: 'bold'
   },
   {
     tag: tags.heading3,
-    fontSize: '1.2em',
+    fontSize: '1.3em',
     fontWeight: 'bold'
+  },
+  {
+    tag: tags.heading4,
+    fontSize: '1.1em',
+    fontWeight: 'bold',
   }
 ])
 
