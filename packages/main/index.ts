@@ -31,6 +31,7 @@ async function createWindow() {
     darkTheme: true,
     vibrancy: 'under-window',
     titleBarStyle: 'hidden',
+    hasShadow: true,
     titleBarOverlay: {
       color: '#2b2d38',
       symbolColor: '#ffffff',

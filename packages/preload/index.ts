@@ -65,7 +65,7 @@ function useLoading() {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: loader12-u6338d783 1s linear alternate infinite;
+    animation: loader12-u6338d783 .8s linear alternate infinite;
     top: 50%;
     margin: -65px 0 0 -75px;
   }
@@ -203,4 +203,4 @@ window.onmessage = ev => {
   ev.data.payload === 'removeLoading' && removeLoading()
 }
 
-setTimeout(removeLoading, 500)
+setTimeout(removeLoading, 300)
