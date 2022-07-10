@@ -1,6 +1,7 @@
 import os from 'os'
 import { join } from 'path'
 import { app, BrowserWindow, ipcMain, nativeTheme } from 'electron'
+import { autoUpdater } from 'electron-updater'
 
 const isWin7 = os.release().startsWith('6.1')
 if (isWin7) app.disableHardwareAcceleration()
@@ -15,6 +16,7 @@ if (!app.requestSingleInstanceLock()) {
 let win: BrowserWindow | null = null
 
 async function createWindow() {
+  autoUpdater.checkForUpdatesAndNotify()
   win = new BrowserWindow({
     title: 'Main window',
     minWidth: 800,
@@ -24,6 +26,7 @@ async function createWindow() {
       contextIsolation: false,
       nodeIntegration: true
     },
+    center: true,
     frame: false,
     resizable: true,
     autoHideMenuBar: true,
@@ -38,7 +41,7 @@ async function createWindow() {
       height: 36
     },
     // visualEffectState: 'active',
-    // transparent: true,
+    transparent: os.platform() === 'linux'
     // https://github.com/electron/electron/issues/20357
   })
 
