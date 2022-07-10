@@ -11,13 +11,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
   color: #B4B4B4;
   overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
-  body { background: #282c34; color: #B4B4B4; }
+  /* body { background: #282c3442; color: #B4B4B4; } */
 }
 
 
@@ -25,11 +24,9 @@ body {
   height: 100vh;
   overflow: hidden;
   color-scheme: dark;
-  background-color: #282c34;
-  backdrop-filter: blur(7px);
-  /* box-shadow: inset 0 0 2000px rgba(22, 22, 22, 0.288); */
+  background-color: #23272e;
+  border: 1px solid #abb2bf23;
   border-radius: 9px;
-  border: 1px solid #abb2bf1c;
 }
 
 .ͼ1 .cm-scroller, code {
