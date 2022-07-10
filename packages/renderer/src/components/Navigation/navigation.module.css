@@ -1,0 +1,98 @@
+.navigation {
+  height: 36px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-app-region: drag;
+  background-color: #2b2d38;
+}
+
+.navLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: max-content;
+}
+
+.navLeft ul {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.navLeft ul li {
+  list-style: none;
+  background-color: #282c34;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  -webkit-app-region: no-drag;
+  user-select: none;
+}
+
+.logo {
+  height: 100%;
+  width: max-content;
+  position: relative;
+  display: grid;
+  padding: 0 0.8rem;
+  place-content: center;
+  border-bottom: 1px solid #abb2bf2c;
+  border-right: 1px solid #abb2bf2c;
+  border-bottom-right-radius: 0.3rem;
+  /* place-items: center; */
+}
+
+.logo img {
+  height: 20px;
+  width: 20px;
+}
+
+.navActions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  border-left: 1px solid #abb2bf2c;
+  border-bottom: 1px solid #abb2bf2c;
+  border-bottom-left-radius: 0.3rem;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+button {
+  -webkit-app-region: no-drag;
+}
+
+.navActions button {
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0 0.7rem;
+  position: relative;
+  background-color: #2b2d38;
+}
+.navActions button:hover {
+  background-color: #3d3f4d;
+}
+
+.navActions img {
+  height: 100%;
+  width: max-content;
+  transform: scale(0.97);
+}

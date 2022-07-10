@@ -1,5 +1,5 @@
 .preview {
-  height: 100vh;
+  height: 100%;
   flex: 0 0 50%;
   padding: 1rem;
   box-sizing: border-box;
@@ -27,7 +27,7 @@
 }
 
 .preview pre {
-  background-color: rgba(27, 31, 35, 0.45);
+  background-color: #1b1f2373;
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1rem 0;

@@ -1,6 +1,6 @@
 import os from 'os'
 import { join } from 'path'
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain, nativeTheme } from 'electron'
 
 const isWin7 = os.release().startsWith('6.1')
 if (isWin7) app.disableHardwareAcceleration()
@@ -22,18 +22,29 @@ async function createWindow() {
     webPreferences: {
       preload: join(__dirname, '../preload/index.cjs'),
       contextIsolation: false,
-      nodeIntegration: true,
+      nodeIntegration: true
     },
-    frame: true,
+    frame: false,
     resizable: true,
-    transparent: false,
+    autoHideMenuBar: true,
+    roundedCorners: true,
+    darkTheme: true,
+    vibrancy: 'under-window',
+    titleBarStyle: 'hidden',
+    hasShadow: true,
+    titleBarOverlay: {
+      color: '#2b2d38',
+      symbolColor: '#ffffff',
+      height: 36
+    },
+    // visualEffectState: 'active',
+    // transparent: true,
     // https://github.com/electron/electron/issues/20357
-    backgroundColor: '#00000001',
   })
 
   // Test actively push message to the Electron-Renderer
   win.webContents.on('did-finish-load', () => {
-    win?.webContents.send('main-process-message', (new Date).toLocaleString())
+    win?.webContents.send('main-process-message', new Date().toLocaleString())
   })
 
   if (app.isPackaged) {
@@ -45,6 +56,19 @@ async function createWindow() {
     win.loadURL(url)
     // win.webContents.openDevTools({ mode: 'undocked' })
   }
+
+  ipcMain.handle('dark-mode:toggle', () => {
+    if (nativeTheme.shouldUseDarkColors) {
+      nativeTheme.themeSource = 'dark'
+    } else {
+      nativeTheme.themeSource = 'dark'
+    }
+    return nativeTheme.shouldUseDarkColors
+  })
+
+  ipcMain.handle('dark-mode:system', () => {
+    nativeTheme.themeSource = 'dark'
+  })
 }
 
 app.whenReady().then(createWindow)
