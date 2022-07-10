@@ -34,21 +34,128 @@ const safeDOM = {
  * https://matejkustec.github.io/SpinThatShit
  */
 function useLoading() {
-  const className = 'loaders-css__square-spin'
+  const className = 'loader12'
   const styleContent = `
-@keyframes square-spin {
-  25% { transform: perspective(100px) rotateX(180deg) rotateY(0); }
-  50% { transform: perspective(100px) rotateX(180deg) rotateY(180deg); }
-  75% { transform: perspective(100px) rotateX(0) rotateY(180deg); }
-  100% { transform: perspective(100px) rotateX(0) rotateY(0); }
-}
-.${className} > div {
-  animation-fill-mode: both;
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
-}
+  /*
+  .app-logo {
+    width: 100px;
+    position: absolute;
+    inset: 0;
+    line-height: 0.5;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    padding-bottom: 50px;
+    color: #fff;
+  }
+  h2 {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 1.5rem;
+  }
+  span {
+    white-space: nowrap;
+    font-size: 0.8em;
+    opacity: 0.5;
+  }
+  */
+  .loader12 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: loader12-u6338d783 1s linear alternate infinite;
+    top: 50%;
+    margin: -65px 0 0 -75px;
+  }
+
+  :root {
+    --bg-load: rgb(74, 76, 87);
+  }
+
+  @keyframes loader12-u6338d783 {
+    0% {
+      box-shadow: -50px 40px 0 2px #282c33,
+       -25px 40px 0 0 var(--bg-load),
+        0 40px 0 0 var(--bg-load),
+        25px 40px 0 0 var(--bg-load),
+        50px 40px 0 0 var(--bg-load),
+        75px 40px 0 0 var(--bg-load),
+        100px 40px 0 0 var(--bg-load),
+        125px 40px 0 0 var(--bg-load);
+    }
+    14% {
+        box-shadow: -50px 40px 0 0 var(--bg-load),
+        -25px 40px 0 2px #e06b74,
+        0 40px 0 0 var(--bg-load),
+        25px 40px 0 0 var(--bg-load),
+        50px 40px 0 0 var(--bg-load),
+        75px 40px 0 0 var(--bg-load),
+        100px 40px 0 0 var(--bg-load),
+        125px 40px 0 0 var(--bg-load);
+    }
+    28% {
+        box-shadow: -50px 40px 0 0 var(--bg-load),
+        -25px 40px 0 0 var(--bg-load),
+        0 40px 0 2px #98C379,
+        25px 40px 0 0 var(--bg-load),
+        50px 40px 0 0 var(--bg-load),
+        75px 40px 0 0 var(--bg-load),
+        100px 40px 0 0 var(--bg-load),
+        125px 40px 0 0 var(--bg-load);
+    }
+    42% {
+        box-shadow: -50px 40px 0 0 var(--bg-load),
+        -25px 40px 0 0 var(--bg-load),
+        0 40px 0 0 var(--bg-load),
+        25px 40px 0 2px #e5c07a,
+        50px 40px 0 0 var(--bg-load),
+        75px 40px 0 0 var(--bg-load),
+        100px 40px 0 0 var(--bg-load),
+        125px 40px 0 0 var(--bg-load);
+    }
+    56% {
+        box-shadow: -50px 40px 0 0 var(--bg-load),
+        -25px 40px 0 0 var(--bg-load),
+        0 40px 0 0 var(--bg-load),
+        25px 40px 0 0 var(--bg-load),
+        50px 40px 0 2px #62aeef,
+        75px 40px 0 0 var(--bg-load),
+        100px 40px 0 0 var(--bg-load),
+        125px 40px 0 0 var(--bg-load);
+    }
+    70% {
+        box-shadow: -50px 40px 0 0 var(--bg-load),
+        -25px 40px 0 0 var(--bg-load),
+        0 40px 0 0 var(--bg-load),
+        25px 40px 0 0 var(--bg-load),
+        50px 40px 0 0 var(--bg-load),
+        75px 40px 0 2px #c678dd,
+        100px 40px 0 0 var(--bg-load),
+        125px 40px 0 0 var(--bg-load);
+    }
+    84% {
+        box-shadow: -50px 40px 0 0 var(--bg-load),
+        -25px 40px 0 0 var(--bg-load),
+        0 40px 0 0 var(--bg-load),
+        25px 40px 0 0 var(--bg-load),
+        50px 40px 0 0 var(--bg-load),
+        75px 40px 0 0 var(--bg-load),
+        100px 40px 0 2px #56B6C2,
+        125px 40px 0 0 var(--bg-load);
+    }
+    100% {
+        box-shadow: -50px 40px 0 0 var(--bg-load),
+        -25px 40px 0 0 var(--bg-load),
+        0 40px 0 0 var(--bg-load),
+        25px 40px 0 0 var(--bg-load),
+        50px 40px 0 0 var(--bg-load),
+        75px 40px 0 0 var(--bg-load),
+        100px 40px 0 0 var(--bg-load),
+        125px 40px 0 2px #ABB2BF;
+    }
+  }
 .app-loading-wrap {
   position: fixed;
   top: 0;
@@ -58,7 +165,8 @@ function useLoading() {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #282c34;
+  background: #2b2d38;
+  color: #fff;
   z-index: 9;
 }
     `
@@ -68,7 +176,11 @@ function useLoading() {
   oStyle.id = 'app-loading-style'
   oStyle.innerHTML = styleContent
   oDiv.className = 'app-loading-wrap'
-  oDiv.innerHTML = `<div class="${className}"><div></div></div>`
+  oDiv.innerHTML = `<div class="${className}"></div>`
+  // oDiv.innerHTML += `<div class='app-logo'>
+  //   <h2>Markdown Preview</h2>
+  //   <span>created by Luis Gabriel Janco A.</span>
+  // </div>`
 
   return {
     appendLoading() {
@@ -91,4 +203,4 @@ window.onmessage = ev => {
   ev.data.payload === 'removeLoading' && removeLoading()
 }
 
-setTimeout(removeLoading, 100)
+setTimeout(removeLoading, 500)
