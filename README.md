@@ -35,3 +35,8 @@ yarn install && yarn run dev
 ## Demo preview `linux`
 
 ![preview-markdown-linux](https://user-images.githubusercontent.com/88288135/178179684-92a2075c-aeae-4e5d-a5db-45769b49d823.jpg)
+
+Install app using `snap` run: 
+```zsh
+snap install --dangerous markdown-preview_1.0.1_amd64.snap
+```
