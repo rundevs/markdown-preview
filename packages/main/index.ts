@@ -2,7 +2,6 @@ import os from 'os'
 import { join } from 'path'
 import { app, BrowserWindow, ipcMain, nativeTheme } from 'electron'
 import { autoUpdater } from 'electron-updater'
-
 const isWin7 = os.release().startsWith('6.1')
 if (isWin7) app.disableHardwareAcceleration()
 
@@ -14,6 +13,8 @@ if (!app.requestSingleInstanceLock()) {
 }
 
 let win: BrowserWindow | null = null
+const ipc = ipcMain
+const PACKAGE_ROOT = __dirname
 
 async function createWindow() {
   autoUpdater.checkForUpdatesAndNotify()
@@ -22,7 +23,7 @@ async function createWindow() {
     minWidth: 800,
     minHeight: 600,
     webPreferences: {
-      preload: join(__dirname, '../preload/index.cjs'),
+      preload: join(PACKAGE_ROOT, '../preload/index.cjs'),
       contextIsolation: false,
       nodeIntegration: true
     },
@@ -51,7 +52,7 @@ async function createWindow() {
   })
 
   if (app.isPackaged) {
-    win.loadFile(join(__dirname, '../renderer/index.html'))
+    win.loadFile(join(PACKAGE_ROOT, '../renderer/index.html'))
   } else {
     // 🚧 Use ['ENV_NAME'] avoid vite:define plugin
     const url = `http://${process.env['VITE_DEV_SERVER_HOST']}:${process.env['VITE_DEV_SERVER_PORT']}`
@@ -60,7 +61,8 @@ async function createWindow() {
     // win.webContents.openDevTools({ mode: 'undocked' })
   }
 
-  ipcMain.handle('dark-mode:toggle', () => {
+  // Handle window events
+  ipc.handle('dark-mode:toggle', () => {
     if (nativeTheme.shouldUseDarkColors) {
       nativeTheme.themeSource = 'dark'
     } else {
@@ -69,9 +71,28 @@ async function createWindow() {
     return nativeTheme.shouldUseDarkColors
   })
 
-  ipcMain.handle('dark-mode:system', () => {
+  ipc.handle('dark-mode:system', () => {
     nativeTheme.themeSource = 'dark'
   })
+
+  ipc.on('closeApp', () => {
+    win?.close()
+  })
+
+  ipc.on('minimizeApp', () => {
+    win?.minimize()
+  })
+
+  ipc.on('maximizeRestoreApp', () => {
+    if (win?.isMaximized()) {
+      win?.restore()
+    } else {
+      win?.maximize()
+    }
+  })
+  // // Check if is Maximized
+  // win.on('maximize', () => win?.webContents.send('isMaximized'))
+  // win.on('unmaximize', () => win?.webContents.send('isRestored'))
 }
 
 app.whenReady().then(createWindow)

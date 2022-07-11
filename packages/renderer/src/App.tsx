@@ -1,4 +1,3 @@
-import os from 'os'
 import React, { useCallback, useEffect, useState } from 'react'
 import CodeEditor from './components/Editor/CodeEditor'
 import style from './assets/styles/app.module.css'
@@ -9,8 +8,9 @@ import NavBar from './components/Navigation/NavBar'
 const changeStyle = () => {
   document.body.style.backgroundColor = 'transparent'
 }
-
-export const isLinux = os.platform() === 'linux'
+export const isLinux: string | undefined = navigator.userAgent
+  .split(' ')
+  .find(word => word === 'Linux')
 
 const App: React.FC = (): JSX.Element => {
   const [doc, setDoc] = useState<string>(exampleMarkdown)
