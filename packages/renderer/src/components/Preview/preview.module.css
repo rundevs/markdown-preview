@@ -1,13 +1,18 @@
+::selection {
+  color: inherit;
+  background-color: #62adef6c;
+}
+
 .preview {
   height: 100%;
-  flex: 0 0 50%;
+  flex: 0 0 51%;
   padding: 1rem;
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
   color: #bac1cc;
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
   border-left: 1px solid #4248539a;
 }
 
@@ -27,14 +32,20 @@
 }
 
 .preview pre {
-  background-color: #1b1f2373;
+  background-color: #1b1f23;
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1rem 0;
   overflow-x: auto;
   position: relative;
+  font-size: 13px;
   /* wrap in new line */
   /* white-space: pre-wrap; */
+}
+
+.preview pre ::selection {
+  color: inherit;
+  background-color: #6e768173;
 }
 
 .preview pre::-webkit-scrollbar, .preview table::-webkit-scrollbar {
