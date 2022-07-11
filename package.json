@@ -3,12 +3,24 @@
   "productName": "markdown-preview",
   "private": true,
   "version": "1.0.1",
-  "description": "Markdown editor with preview app for desk.",
-  "author": "Luis Gabriel Janco A.",
+  "description": "Markdown editor with preview.",
+  "author": {
+    "name": "Luis Gabriel J.",
+    "email": "janco7249@gmail.com",
+    "url": "https://github.com/LuiSauter"
+  },
+  "bugs": {
+    "url": "https://github.com/LuiSauter/markdown-preview/issues"
+  },
+  "homepage": "https://github.com/LuiSauter/markdown-preview/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:LuiSauter/markdown-preview.git"
+  },
   "license": "MIT",
   "main": "dist/main/index.cjs",
   "scripts": {
-    "build" : "node scripts/build.mjs",
+    "build": "node scripts/build.mjs",
     "dev": "node scripts/watch.mjs",
     "compile": "electron-builder build --config electron-builder.config.js --config.asar=false"
   },
@@ -40,6 +52,7 @@
   },
   "devDependencies": {
     "@types/electron-devtools-installer": "2.2.2",
+    "@types/node": "^18.0.3",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
     "@typescript-eslint/eslint-plugin": "5.30.0",
