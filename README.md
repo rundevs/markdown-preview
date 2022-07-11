@@ -28,6 +28,10 @@ yarn install && yarn run dev
 
 <!-- ## Debug -->
 
-## Demo preview
+## Demo preview `windows`
 
 ![demo-markdown-preview](https://user-images.githubusercontent.com/88288135/178121670-43a89b05-191d-474b-95bf-9a56e10549cd.jpg)
+
+## Demo preview `linux`
+
+![preview-markdown-linux](https://user-images.githubusercontent.com/88288135/178179684-92a2075c-aeae-4e5d-a5db-45769b49d823.jpg)
