@@ -1,5 +1,5 @@
 import fs from 'fs'
-import path from 'path'
+import { join } from 'path'
 import { builtinModules } from 'module'
 import type { ResolvedConfig, Plugin, ConfigEnv } from 'vite'
 
@@ -228,7 +228,7 @@ function resolveModules(config: ResolvedConfig, options: Options) {
 
 function lookupFile(filename: string, paths: string[]) {
   for (const p of paths) {
-    const filepath = path.join(p, filename)
+    const filepath = join(p, filename)
     if (fs.existsSync(filepath)) {
       return filepath
     }
