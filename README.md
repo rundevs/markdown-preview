@@ -12,6 +12,7 @@
   ![GitHub stars](https://img.shields.io/github/stars/LuiSauter/markdown-preview?color=fa6470&style=flat)
   ![GitHub license](https://img.shields.io/github/license/LuiSauter/markdown-preview?style=flat)
   [![Required Node.JS >= v14.17.0](https://img.shields.io/static/v1?label=node&message=%3E=14.17.0&logo=node.js&color=3f893e&style=flat)](https://nodejs.org/about/releases)
+  ![](https://badgen.net/badge/Open%20Source/Yes/blue?icon=github)
   
 </div>
 
