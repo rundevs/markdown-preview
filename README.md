@@ -2,11 +2,11 @@
 
 <div align="center">
 
-  # Markdown Preview
+  ## Markdown Preview
   
-</div>
+</div><br>
 
-<div align="center">
+<div align="">
 
   [![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite)
   ![GitHub stars](https://img.shields.io/github/stars/LuiSauter/markdown-preview?color=fa6470&style=flat)
@@ -17,15 +17,13 @@
 
 Markdown Preview is an fast editor of markdown with preview document.
 
-## Overview
-
 - 🌱  Simple Editor   
 - 🖥   It's disponible for windows & Linux   
 - 🎉  It's Free  
 
 <br>
 <div align="center">
-  <img width="700px" src="https://user-images.githubusercontent.com/88288135/178380053-7af583b0-eb28-4d3f-b61b-ab4e07612989.png" title="Markdown Preview" />
+  <img width="" src="https://user-images.githubusercontent.com/88288135/178380053-7af583b0-eb28-4d3f-b61b-ab4e07612989.png" title="Markdown Preview" />
 </div>
 
 
