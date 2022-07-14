@@ -1,4 +1,4 @@
-import fs from 'fs'
+import * as fs from 'fs'
 import { join } from 'path'
 import { builtinModules } from 'module'
 import type { ResolvedConfig, Plugin, ConfigEnv } from 'vite'
