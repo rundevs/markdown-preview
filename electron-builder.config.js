@@ -29,24 +29,22 @@ const config = {
     ],
     artifactName: '${productName}_${version}.${ext}',
     publish: 'github',
-    icon: 'buildResources/icon.png'
+    icon: 'buildResources/icon.ico'
 
   },
   linux: {
     icon: 'buildResources/icon.png',
-    target: ['snap', 'pacman', 'AppImage'],
+    target: ['snap', 'pacman', 'AppImage', 'deb', 'rpm'],
     artifactName: '${productName}_${version}.${ext}',
     category: 'Development',
-    maintainer: 'Luis Gabriel j.',
+    maintainer: 'Luis Gabriel janco',
     publish: 'github',
   },
   nsis: {
     oneClick: true,
-    license: 'LICENSE',
-    installerIcon: 'buildResources/icon.png',
-    uninstallerIcon: 'buildResources/icon.png',
-    perMachine: false,
-    allowToChangeInstallationDirectory: true,
+    license: 'buildResources/LICENCE.md',
+    installerIcon: 'buildResources/icon.ico',
+    uninstallerIcon: 'buildResources/icon.ico',
     deleteAppDataOnUninstall: false
   }
 }
