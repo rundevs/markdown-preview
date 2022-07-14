@@ -1,15 +1,14 @@
 import React from 'react'
 import style from './navigation.module.css'
-import viteLogo from '/vite.svg'
-import { Close, Dash, MaximizeLeft, MaximizeRight } from '../../assets/icons'
+import { Close, Dash, Logo, MaximizeLeft, MaximizeRight } from '../../assets/icons'
 import { isLinux } from '../../App'
 const { ipcRenderer } = window.require('electron')
 const ipc = ipcRenderer
 
 /**
  * @description you should ask me if you can close the window
- * @todo ask me if you can close the window
- * @todo replace window.confirm for custom modal
+ * @todo ask me if you can close the window on Linux
+ * @todo replace window.confirm for custom modal on Linux
  * */
 const handleClose = (): void => {
   // const closed = confirm('Are you sure you want to close the app?')
@@ -41,9 +40,9 @@ const NavBar: React.FC = (): JSX.Element => {
             </div>
           </div>
         ) : (
-          <figure className={style.logo}>
-            <img src={viteLogo} alt="" />
-          </figure>
+          <div className={style.logo}>
+            <Logo />
+          </div>
         )}
         <ul>
           <li>readme.md</li>

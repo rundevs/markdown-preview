@@ -113,9 +113,10 @@
   border-bottom-right-radius: 0.3rem;
 }
 
-.logo img {
+.logo svg {
   height: 20px;
   width: 20px;
+  color: #23a3e9;
 }
 
 .navActions {
