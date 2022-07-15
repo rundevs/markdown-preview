@@ -1,6 +1,6 @@
 {
   "name": "markdown-preview",
-  "productName": "markdown-preview",
+  "productName": "Markdown Preview",
   "private": true,
   "version": "v1.0.0-beta.2",
   "description": "Markdown editor with preview.",
@@ -10,12 +10,12 @@
     "url": "https://github.com/LuiSauter"
   },
   "bugs": {
-    "url": "https://github.com/LuiSauter/markdown-preview/issues"
+    "url": "https://github.com/Simply-Markdown/markdown-preview/issues"
   },
-  "homepage": "https://github.com/LuiSauter/markdown-preview/blob/main/README.md",
+  "homepage": "https://github.com/Simply-Markdown/markdown-preview/blob/main/README.md",
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:LuiSauter/markdown-preview.git"
+    "url": "git+git@github.com:Simply-Markdown/markdown-preview.git"
   },
   "license": "MIT",
   "main": "dist/main/index.cjs",

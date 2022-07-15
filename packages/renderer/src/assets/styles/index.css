@@ -35,16 +35,30 @@ body {
 }
 
 /* width */
-::-webkit-scrollbar {
+.scrollbar-visible::-webkit-scrollbar,
+.scrollbar-visible-over::-webkit-scrollbar {
   width: 10px;
+  /* border-left: 1px solid #2c313a; */
+
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 10px;
+  /* border-left: 1px solid #2c313a; */
 }
 
+/* Track */
+.scrollbar-visible::-webkit-scrollbar-track,
+.scrollbar-visible-over::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background: #4248539a;
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  background: #abb2bf23;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #3c434ed7;
+.scrollbar-visible::-webkit-scrollbar-thumb:hover {
+  background: #abb2bf34;
 }

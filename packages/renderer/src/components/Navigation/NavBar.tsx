@@ -40,7 +40,7 @@ const NavBar: React.FC = (): JSX.Element => {
             </div>
           </div>
         ) : (
-          <div className={style.logo}>
+          <div title='Markdown Preview' className={style.logo}>
             <Logo />
           </div>
         )}
