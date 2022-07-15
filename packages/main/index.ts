@@ -26,16 +26,18 @@ async function createWindow() {
     show: true,
     frame: false,
     resizable: false,
+    center: true,
     alwaysOnTop: true,
     backgroundColor: '#23272e',
     roundedCorners: true,
     autoHideMenuBar: true,
     transparent: true,
+    icon: join(PACKAGE_ROOT, '../../buildResources/icon.ico'),
   })
 
   win = new BrowserWindow({
     show: false,
-    title: 'Main window',
+    title: 'Markdown Preview',
     minWidth: 800,
     minHeight: 600,
     icon: join(PACKAGE_ROOT, '../../buildResources/icon.ico'),
@@ -88,7 +90,7 @@ async function createWindow() {
 
     win.loadURL(url)
     winLoading.loadURL(file)
-    // winLoading.webContents.openDevTools({ mode: 'undocked' })
+    // win.webContents.openDevTools({ mode: 'bottom' })
   }
 
   // Handle window events
