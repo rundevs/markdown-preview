@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import useCodeMirror from '../../hooks/useCodeMirror'
 import style from './editor.module.css'
+import useMouseHover from '../../hooks/useMouseHover'
 
 interface Props {
   initialDoc: string
@@ -13,19 +14,16 @@ const CodeEditor: React.FC<Props> = props => {
     (state: any) => onChange(state.doc.toString()),
     [onChange]
   )
-  const [refContainer, editorView] = useCodeMirror<HTMLDivElement>({
+  const [refContainer] = useCodeMirror<HTMLDivElement>({
     initialDoc: initialDoc,
     onChange: handleChange
   })
-
-  useEffect(() => {
-    if (editorView) {
-      // Do nothing for now
-    }
-  }, [editorView])
+  const [, handleHover] = useMouseHover(refContainer)
 
   return (
     <div
+      // onMouseEnter={handleHover}
+      // onMouseLeave={handleHover}
       ref={refContainer}
       className={style.editorWrapper}
     />
