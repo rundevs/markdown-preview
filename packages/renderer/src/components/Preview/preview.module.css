@@ -12,7 +12,7 @@
   overflow-x: hidden;
   color: #bac1cc;
   position: relative;
-  font-size: 14px;
+  font-size: 15px;
   border-left: 1px solid #4248539a;
 }
 
@@ -38,7 +38,7 @@
   margin: 1rem 0;
   overflow-x: auto;
   position: relative;
-  font-size: 13px;
+  font-size: 14px;
   /* wrap in new line */
   /* white-space: pre-wrap; */
 }
