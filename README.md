@@ -16,7 +16,7 @@
   
 </div>
 
-Markdown Preview is an fast editor of markdown with preview document.
+Markdown Preview is an fast editor of markdown with preview document, [pre-release.](https://github.com/Simply-Markdown/markdown-preview/releases/tag/v.1.0.0-beta.1)
 
 - 🌱  Simple Editor   
 - 🖥   It's disponible for windows & Linux   
